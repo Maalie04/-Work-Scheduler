@@ -44,3 +44,10 @@ body {
     border-left: solid;
 }
 
+/* input.form-control {
+    background-color: red;
+} */
+
+input.bg-color {
+    background-color: skyblue;
+}

@@ -37,3 +37,10 @@ $("#11time-display").text(timeDisplayEl);
 var timeDisplayEl =  moment().add(8, 'hours').format('LT');
 $("#12time-display").text(timeDisplayEl);
 
+var current = moment().format('LT');
+var backgrd =  $("input.format-control");
+
+if (timeDisplayEl < current) {
+     
+}
+
