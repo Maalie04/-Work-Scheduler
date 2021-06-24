@@ -1,0 +1,46 @@
+:root {
+    --blue: #2980b9;
+    --lightblue: #3498db;
+    --light: #ecf0f1;
+    --darkblue: #2c3e50;
+    --red: #e74c3c;
+  }
+  
+body {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    background-color: var(--light);
+    color: var(--darkblue);
+  }
+
+.custom-jumbotron {
+    background-color: var(--darkblue);
+    color: var(--light);
+  }
+
+.list-group-item, .list-group-item  {
+    width: 75%;
+    margin: 2px;
+    margin-left: 15%;
+}
+
+.list-group-item {
+    border: 1.5px solid;
+}
+
+.list-group-item, .list-group-item-action, .list-group-item-primary {
+    height: 50px;
+}
+
+#button {
+    height: 30px;
+    width: 30px;
+    margin-left: 97%;
+    border-left: 5px solid;
+}
+
+.form-control {
+    border-right: solid;
+    border-left: solid;
+}
+
