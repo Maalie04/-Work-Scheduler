@@ -39,8 +39,12 @@ $("#12time-display").text(timeDisplayEl);
 
 var current = moment().format('LT');
 var backgrd =  $("input.format-control");
+var set = document.querySelector("input.bg-color");
 
+function setColor(){
 if (timeDisplayEl < current) {
-     
+    set.setAttribute("background-color: skyblue;")
+    console.log("sexy");
 }
-
+};
+setColor();
