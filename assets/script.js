@@ -38,14 +38,5 @@ var timeDisplayEl =  moment().add(8, 'hours').format('LT');
 $("#12time-display").text(timeDisplayEl);
 
 var current = moment().format('LT');
-console.log(timeDisplayEl);
-var backgrd =  $("input.format-control");
-var set = document.querySelector("input.bg-color");
+// console.log(timeDisplayEl);
 
-function setColor(){
-if (timeDisplayEl = moment().subtract(4, 'hours').format('LT') ){
-    set.setAttribute("style","background-color: red;")
-    console.log("sexy");
-}
-};
-setColor();
