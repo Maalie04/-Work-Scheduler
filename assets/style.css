@@ -42,61 +42,9 @@ body {
 .form-control {
     border-right: solid;
     border-left: solid;
+    width: 10px;
 }
 
-/* input.form-control {
-    background-color: red;
-} */
-
-input.bg-color {
-    background-color: red;
-}
-
-input.bg-color1 {
-    background-color: red;
-}
-
-input.bg-color2 {
-    background-color: red;
-}
-
-input.bg-color3 {
-    background-color: red;
-}
-
-
-input.bg-color4 {
-    background-color: skyblue;
-}
-
-input.bg-color5 {
-    background-color: green;
-}
-
-input.bg-color6 {
-    background-color: green;
-}
-
-input.bg-color7 {
-    background-color: green;
-}
-
-input.bg-color8 {
-    background-color: green;
-}
-
-input.bg-color9 {
-    background-color: green;
-}
-
-input.bg-color10 {
-    background-color: green;
-}
-
-input.bg-color11 {
-    background-color: green;
-}
-
-input.bg-color12 {
-    background-color: green;
+.span, #time-display, .list-group-item {
+    width: 57px;
 }
