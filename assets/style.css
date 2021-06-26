@@ -49,3 +49,16 @@ body {
 .span, #time-display, .list-group-item {
     width: 57px;
 }
+
+.past {
+    background-color: red;
+    color: white;
+  }
+.present {
+    background-color: skyblue;
+    color: white;
+  }
+.future {
+    background-color: green;
+    color: white;
+  }

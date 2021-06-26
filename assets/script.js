@@ -9,7 +9,7 @@ var textA14 = document.querySelector("#input-14");
 var textA15 = document.querySelector("#input-15");
 var textA16 = document.querySelector("#input-16");
 
-today = moment().format("dddd MMMM Do");  
+today = moment().format("dddd MMMM Do");
 $("#currentDay").text(today);
 
 console.log(today)
@@ -19,30 +19,89 @@ var inputText = document.querySelector("#input-value");
 var button = document.querySelector(".btn");
 var time = $(this).parent().attr('id');
 
-if(current) {
-    $('textarea').addClass('present');
-}
 
-button.addEventListener("click", function(event) {
+
+
+button.addEventListener("click", function (event) {
     event.preventDefault();
     console.log("yes");
-    
-var user = {
-    input: textA9.value.trim(),
-    input: textA10.value.trim(),
-    input: textA11.value.trim(),
-    input: textA12.value.trim(),
-    input: textA13.value.trim(),
-    input: textA14.value.trim(),
-    input: textA15.value.trim(),
-    input: textA16.value.trim(),   
-};
 
 
-    localStorage.setItem(user, JSON.stringify(user));
+})
 
-});
+var user = [
+    {
+        userInput: textA9.value.trim(),
+        title: "",
+        dataHour: 9,
+    },
+    {
+        userInput: textA10.value.trim(),
+        title: "",
+    },
+    {
+        userInput: textA11.value.trim(),
+        title: "",
+    },
+    {
+        userInput: textA12.value.trim(),
+        title: "",
+    },
+    {
+        userInput: textA13.value.trim(),
+        title: "",
+    },
+    {
+        userInput: textA14.value.trim(),
+        title: "",
+    },
+    {
+        userInput: textA15.value.trim(),
+        title: "",
+    },
+    {
+        userInput: textA16.value.trim(),
+        title: "",
+    },
+]
+
+var num = 0;
+
+function setSched() {
+
+    for (var i = 0; i < user.length; i++) {
+        // console.log(i);
+        // // if (i < current) {
+        // //     $('textarea').addClass('past');
+        // // }
+        // // else if (i > current) {
+        // //     $('textarea').addClass('future');
+        // // }
+         
+
+    }
+
+}
+
+
+localStorage.setItem(user.input, JSON.stringify(user));
+
+console.log(current);
+
+$(".form-control").text(user.userInput);
+setSched();
 
 
 
+// $('textarea').addClass('present');
 
+$('textarea').addClass('past');
+
+// $('textarea').addClass('present');
+
+// $('textarea').addClass('future');
+
+if (user.dataHour > current){
+    $('textarea').addClass('present');
+}
+console.log(user.dataHour);
