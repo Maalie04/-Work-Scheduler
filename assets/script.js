@@ -8,6 +8,7 @@ var textA13 = document.querySelector("#input-13");
 var textA14 = document.querySelector("#input-14");
 var textA15 = document.querySelector("#input-15");
 var textA16 = document.querySelector("#input-16");
+var textA17 = document.querySelector("#input-17");
 
 today = moment().format("dddd MMMM Do");
 $("#currentDay").text(today);
@@ -18,90 +19,98 @@ var input = document.querySelector(".form-control");
 var inputText = document.querySelector("#input-value");
 var button = document.querySelector(".btn");
 var time = $(this).parent().attr('id');
-
-
-
-
-button.addEventListener("click", function (event) {
-    event.preventDefault();
-    console.log("yes");
-
-
-})
+var dataHour = 0;
 
 var user = [
     {
-        userInput: textA9.value.trim(),
+        
         title: "",
         dataHour: 9,
     },
     {
-        userInput: textA10.value.trim(),
+       
         title: "",
+        dataHour: 10,
     },
     {
-        userInput: textA11.value.trim(),
+       
         title: "",
+        dataHour: 11,
     },
     {
-        userInput: textA12.value.trim(),
+        
         title: "",
+        dataHour: 12,
     },
     {
-        userInput: textA13.value.trim(),
+        
         title: "",
+        dataHour: 13,
     },
     {
-        userInput: textA14.value.trim(),
+        
         title: "",
+        dataHour: 14,
     },
     {
-        userInput: textA15.value.trim(),
+        
         title: "",
+        dataHour: 15,
     },
     {
-        userInput: textA16.value.trim(),
+        
         title: "",
+        dataHour: 16,
     },
+    {
+    
+        title: "",
+        dataHour: 17,
+    },
+    
 ]
-
-var num = 0;
 
 function setSched() {
 
     for (var i = 0; i < user.length; i++) {
-        // console.log(i);
-        // // if (i < current) {
-        // //     $('textarea').addClass('past');
-        // // }
-        // // else if (i > current) {
-        // //     $('textarea').addClass('future');
-        // // }
-         
+        console.log();
+        if (user[i].dataHour < current) {
+            $('#input-' + user[i].dataHour).addClass('past');
+            $('#input-' + user[i].dataHour).val(user[i].title);
+            console.log(user[i].dataHour);
+        } else if (user[i].dataHour === current) {
+            $('#input-' + user[i].dataHour).addClass('present');
+
+        } else {
+            $('#input-' + user[i].dataHour).addClass('future');
+        }
 
     }
 
 }
 
-
-localStorage.setItem(user.input, JSON.stringify(user));
-
-console.log(current);
-
-$(".form-control").text(user.userInput);
-setSched();
-
-
-
-// $('textarea').addClass('present');
-
-$('textarea').addClass('past');
-
-// $('textarea').addClass('present');
-
-// $('textarea').addClass('future');
-
-if (user.dataHour > current){
-    $('textarea').addClass('present');
+var buttonClicked = function(event){
+    var btnClicked = event.target.getAttribute('input');
 }
-console.log(user.dataHour);
+
+button.addEventListener("click", function (event) {
+    event.preventDefault();
+    console.log("yes");
+    localStorage.setItem("schedulerTimes", JSON.stringify(user));
+ 
+})
+
+    var parsedUser = JSON.parse(localStorage.getItem("schedulerTimes"))
+    
+    if (parsedUser) {
+        user = parsedUser;
+    }
+
+    console.log(current);
+
+    
+    setSched();
+
+
+
+
